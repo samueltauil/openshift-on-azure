@@ -15,6 +15,6 @@ azure vm create --resource-group $resourceGroupName \
     --image-urn RHEL \
     --storage-account-name $storageAccountName \
     --admin-username $adminUserName \
-    --ssh-publickey-file ~/.ssh/id_rsa.pub
-    
+    --admin-password $adminPassword
+ 
 azure vm disk attach-new $resourceGroupName $vmName 30

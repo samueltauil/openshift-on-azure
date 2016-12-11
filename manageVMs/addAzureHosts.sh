@@ -7,7 +7,9 @@ subnetName="default"
 subnetAddressPrefix="10.0.0.0/24"
 networkSecurityGroup="master-workshop-westus2"
 storageAccountName="openshiftwkshpwestus2"
-adminUserName="veer"
+adminUserName="samuel"
+# change this password always
+adminPassword="openshift3"
 
 # Find subnetId
 subnetId="$(azure network vnet subnet show --resource-group $resourceGroupName \
