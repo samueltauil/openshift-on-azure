@@ -1,15 +1,15 @@
 #!/bin/bash
 
-location="westus2"
-resourceGroupName="openshift-workshop"
+location="eastus2"
+resourceGroupName="ose-demolab"
 vnetName="openshift-workshop-westus2-vnet"
 subnetName="default"
 subnetAddressPrefix="10.0.0.0/24"
 networkSecurityGroup="master-workshop-westus2"
-storageAccountName="openshiftwkshpwestus2"
+storageAccountName="osedemolab1"
 adminUserName="samuel"
 # change this password always
-adminPassword="openshift3"
+adminPassword="openshift"
 
 # Find subnetId
 subnetId="$(azure network vnet subnet show --resource-group $resourceGroupName \
@@ -67,6 +67,14 @@ source ./createNodeHost.sh
 #Add AppNode3
 nicName="devdayNode3NIC"
 vmName="dd-node3"
+vmSize="Standard_DS12_V2"
+echo "Adding $vmName"
+
+source ./createNodeHost.sh
+
+#Add AppNode4
+nicName="devdayNode4NIC"
+vmName="dd-node4"
 vmSize="Standard_DS12_V2"
 echo "Adding $vmName"
 
