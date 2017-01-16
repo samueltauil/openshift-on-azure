@@ -15,6 +15,7 @@ azure vm create --resource-group $resourceGroupName \
     --image-urn RHEL \
     --storage-account-name $storageAccountName \
     --admin-username $adminUserName \
-    --admin-password $adminPassword
+    --admin-password $adminPassword \
+    --disable-boot-diagnostics
  
 azure vm disk attach-new $resourceGroupName $vmName 30
