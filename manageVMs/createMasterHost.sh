@@ -9,7 +9,7 @@ azure network nic create --name $nicName \
     --location $location \
     --subnet-id $subnetId \
     --network-security-group-name $networkSecurityGroup \
-    --public-ip-name $publicIPName  
+    --public-ip-name $publicIPName
 
 azure vm create --resource-group $resourceGroupName \
     --name $vmName \
@@ -18,7 +18,7 @@ azure vm create --resource-group $resourceGroupName \
     --subnet-id $subnetId \
     --nic-names $nicName \
     --os-type linux \
-    --image-urn RHEL \
+    --image-urn RedHat:RHEL:7.2:latest \
     --storage-account-name $storageAccountName \
     --admin-username $adminUserName \
     --admin-password $adminPassword \
